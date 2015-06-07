@@ -10,7 +10,7 @@
 
 @interface ARFDollar ()
 
-@property (nonatomic) NSUInteger amount;
+@property (nonatomic) NSInteger amount;
 
 @end
 
@@ -25,7 +25,10 @@
     return self;
 }
 
-
+-(ARFDollar *) times:(NSUInteger) multiplier{
+    
+    return [[ARFDollar alloc] initWithAmount:(self.amount * multiplier)];
+}
 
 
 @end

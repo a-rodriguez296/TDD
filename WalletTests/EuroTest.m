@@ -1,20 +1,21 @@
 //
-//  DollarTest.m
+//  EuroTest.m
 //  Wallet
 //
-//  Created by Alejandro Rodriguez on 6/5/15.
+//  Created by Alejandro Rodriguez on 6/7/15.
 //  Copyright (c) 2015 Agbo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "ARFDollar.h"
+#import "ARFEuro.h"
 
-@interface DollarTest : XCTestCase
+
+@interface EuroTest : XCTestCase
 
 @end
 
-@implementation DollarTest
+@implementation EuroTest
 
 - (void)setUp {
     [super setUp];
@@ -26,13 +27,13 @@
     [super tearDown];
 }
 
-- (void)testDollarTimes{
+- (void)testEuroTimes{
 
-    ARFDollar *dollar = [[ARFDollar alloc] initWithAmount:5];
+    ARFEuro * euro = [[ARFEuro alloc] initWithAmount:5];
+    ARFEuro *product = [euro times:5];
     
-    ARFDollar *product = [dollar times:5];
     
-    XCTAssertEqual(25, product.amount, "Dollar with amount 5 times 5 has to be 25");
+    XCTAssertEqual(25, product.amount, "Euro with amount 5 times 5 has to be 25");
 }
 
 
