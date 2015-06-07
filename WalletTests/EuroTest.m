@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "ARFEuro.h"
-
+#import "ARFMoney-Private.h"
 
 @interface EuroTest : XCTestCase
 
@@ -33,7 +33,7 @@
     ARFEuro *product = [euro times:5];
     
     
-    XCTAssertEqual(25, product.amount, "Euro with amount 5 times 5 has to be 25");
+    XCTAssertEqual(25, [product.amount integerValue], "Euro with amount 5 times 5 has to be 25");
 }
 
 

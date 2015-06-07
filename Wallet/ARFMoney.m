@@ -8,12 +8,8 @@
 
 #import "ARFMoney.h"
 #import "NSObject+GNUStepAddons.h"
+#import "ARFMoney-Private.h"
 
-@interface ARFMoney ()
-
-@property (nonatomic) NSInteger amount;
-
-@end
 
 @implementation ARFMoney
 
@@ -21,7 +17,7 @@
 {
     self = [super init];
     if (self) {
-        _amount = amount;
+        _amount = @(amount);
     }
     return self;
 }
@@ -36,13 +32,13 @@
 #pragma mark Overwritten
 -(NSString *)description{
     
-    return [NSString stringWithFormat:@"<%@ $: %@>", [self class], @(self.amount)];
+    return [NSString stringWithFormat:@"<%@ $: %@>", [self class], self.amount];
     
 }
 
 
 -(NSUInteger)hash{
-    return self.amount;
+    return [self.amount integerValue];
     
 }
 

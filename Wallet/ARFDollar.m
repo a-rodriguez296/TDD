@@ -7,27 +7,15 @@
 //
 
 #import "ARFDollar.h"
-
-@interface ARFDollar ()
-
-@property (nonatomic) NSInteger amount;
-
-@end
+#import "ARFMoney-Private.h"
 
 @implementation ARFDollar
 
-- (id)initWithAmount:(NSUInteger) amount
-{
-    self = [super init];
-    if (self) {
-        _amount = amount;
-    }
-    return self;
-}
+
 
 -(ARFDollar *) times:(NSUInteger) multiplier{
     
-    return [[ARFDollar alloc] initWithAmount:(self.amount * multiplier)];
+    return [[ARFDollar alloc] initWithAmount:([self.amount integerValue]  * multiplier)];
 }
 
 @end

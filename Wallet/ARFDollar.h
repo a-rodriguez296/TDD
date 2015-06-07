@@ -11,9 +11,9 @@
 
 @interface ARFDollar : ARFMoney
 
-@property (nonatomic, readonly) NSInteger amount;
 
-- (id)initWithAmount:(NSUInteger) amount;
+
+
 -(ARFDollar *) times:(NSUInteger) multiplier;
 
 @end

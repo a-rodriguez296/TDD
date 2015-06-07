@@ -47,6 +47,7 @@
 		9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFMoney.m; sourceTree = "<group>"; };
 		9CD4A7EE1B24B3350043DE7E /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		9CD4A7EF1B24B3350043DE7E /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
+		9CD4A7F31B24BAEF0043DE7E /* ARFMoney-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ARFMoney-Private.h"; sourceTree = "<group>"; };
 		ED49C80F1B1CF38E00D683CE /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED49C8131B1CF38E00D683CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED49C8141B1CF38E00D683CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 				9C0A693F1B2254C300A4342B /* ARFDollar.m */,
 				9CD4A7EA1B24B2A60043DE7E /* ARFMoney.h */,
 				9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */,
+				9CD4A7F31B24BAEF0043DE7E /* ARFMoney-Private.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";

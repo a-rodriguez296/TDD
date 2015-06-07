@@ -7,30 +7,20 @@
 //
 
 #import "ARFEuro.h"
+#import "ARFMoney-Private.h"
 
-@interface ARFEuro ()
 
-@property (nonatomic) NSInteger amount;
-
-@end
 
 
 @implementation ARFEuro
 
 
-- (id)initWithAmount:(NSUInteger)amount
-{
-    self = [super init];
-    if (self) {
-        _amount = amount;
-    }
-    return self;
-}
+
 
 
 -(ARFEuro *) times:(NSUInteger)multiplier{
     
-    return [[ARFEuro alloc] initWithAmount:self.amount * multiplier];
+    return [[ARFEuro alloc] initWithAmount:[self.amount integerValue]  * multiplier];
 }
 
 

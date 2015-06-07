@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "ARFDollar.h"
+#import "ARFMoney-Private.h"
 
 @interface DollarTest : XCTestCase
 
@@ -32,7 +33,7 @@
     
     ARFDollar *product = [dollar times:5];
     
-    XCTAssertEqual(25, product.amount, "Dollar with amount 5 times 5 has to be 25");
+    XCTAssertEqual(25, [product.amount integerValue], "Dollar with amount 5 times 5 has to be 25");
 }
 
 
