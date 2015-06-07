@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ARFMoney.h"
 
-@interface ARFDollar : NSObject
+@interface ARFDollar : ARFMoney
 
 @property (nonatomic, readonly) NSInteger amount;
 

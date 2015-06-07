@@ -1,22 +1,21 @@
 //
-//  ARFEuro.m
+//  ARFMoney.m
 //  Wallet
 //
 //  Created by Alejandro Rodriguez on 6/7/15.
 //  Copyright (c) 2015 Agbo. All rights reserved.
 //
 
-#import "ARFEuro.h"
+#import "ARFMoney.h"
+#import "NSObject+GNUStepAddons.h"
 
-@interface ARFEuro ()
+@interface ARFMoney ()
 
 @property (nonatomic) NSInteger amount;
 
 @end
 
-
-@implementation ARFEuro
-
+@implementation ARFMoney
 
 - (id)initWithAmount:(NSUInteger)amount
 {
@@ -27,17 +26,11 @@
     return self;
 }
 
-
--(ARFEuro *) times:(NSUInteger)multiplier{
+-(id) times:(NSUInteger) multiplier{
     
-    return [[ARFEuro alloc] initWithAmount:self.amount * multiplier];
+    return [self subclassResponsibility:_cmd];
 }
 
 
-#pragma mark Overwritten
-
--(BOOL)isEqual:(id)object{
-    return (self.amount == [object amount]);
-}
 
 @end

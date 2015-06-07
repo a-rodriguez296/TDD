@@ -1,5 +1,5 @@
 //
-//  ARFEuro.h
+//  ARFMoney.h
 //  Wallet
 //
 //  Created by Alejandro Rodriguez on 6/7/15.
@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARFMoney.h"
 
-@interface ARFEuro : ARFMoney
+@interface ARFMoney : NSObject
 
-@property (nonatomic, readonly) NSInteger amount;
 
 - (id)initWithAmount:(NSUInteger) amount;
--(ARFEuro *) times:(NSUInteger) multiplier;
+-(id) times:(NSUInteger) multiplier;
 
 @end
