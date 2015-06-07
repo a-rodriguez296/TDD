@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "ARFMoney.h"
+#import "ARFEuro.h"
+#import "ARFDollar.h"
 
 @interface MoneyTest : XCTestCase
 
@@ -48,5 +50,23 @@
     
 }
 
+-(void) testEquality{
+    
+    ARFEuro *euro = [[ARFEuro alloc] initWithAmount:5];
+    ARFEuro *product = [euro times:2];
+    ARFEuro *tenEuro = [[ARFEuro alloc] initWithAmount:10];
+    XCTAssertEqualObjects(tenEuro, product, "10 has to be equal to 5*2");
+    
+    
+    
+    ARFDollar *dollar = [[ARFDollar alloc] initWithAmount:5];
+    ARFDollar *product1 = [dollar times:2];
+    ARFDollar *tenDollar = [[ARFDollar alloc] initWithAmount:10];
+    XCTAssertEqualObjects(tenDollar, product1, "10 has to be equal to 5*2");
+    
+    
+    
+    
+}
 
 @end
