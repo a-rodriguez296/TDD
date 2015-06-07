@@ -36,4 +36,16 @@
 }
 
 
+-(void) testEquality{
+    
+    ARFDollar *dollar = [[ARFDollar alloc] initWithAmount:5];
+    ARFDollar *product = [dollar times:2];
+    
+    ARFDollar *tenDollar = [[ARFDollar alloc] initWithAmount:10];
+    
+    XCTAssertEqualObjects(tenDollar, product, "10 has to be equal to 5*2");
+    
+    
+}
+
 @end
