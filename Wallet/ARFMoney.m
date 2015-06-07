@@ -31,9 +31,18 @@
     return [self subclassResponsibility:_cmd];
 }
 
+
+
+#pragma mark Overwritten
 -(NSString *)description{
     
     return [NSString stringWithFormat:@"<%@ $: %@>", [self class], @(self.amount)];
+    
+}
+
+
+-(NSUInteger)hash{
+    return self.amount;
     
 }
 

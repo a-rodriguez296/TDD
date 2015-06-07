@@ -35,7 +35,18 @@
 }
 
 
-
+-(void) testHash{
+    
+    ARFMoney * money1 = [[ARFMoney alloc] initWithAmount:5];
+    ARFMoney *money2 = [[ARFMoney alloc] initWithAmount:5];
+    ARFMoney *money3 = [[ARFMoney alloc] initWithAmount:6];
+    
+    
+    XCTAssertEqual([money1 hash], [money2 hash], "equal objects ough to have equal hash");
+    
+    XCTAssertNotEqual([money2 hash], [money3 hash], "differnt objects ough to have different hash");
+    
+}
 
 
 @end
