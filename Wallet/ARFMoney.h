@@ -15,5 +15,6 @@
 
 - (id)initWithAmount:(NSUInteger)amount currency:(NSString *) currency;
 -(id) times:(NSUInteger) multiplier;
+-(ARFMoney *) plus:(ARFMoney *) other;
 
 @end

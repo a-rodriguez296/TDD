@@ -56,6 +56,17 @@
 
 }
 
+-(void)testPlus{
+
+    ARFMoney *dollar1 = [ARFMoney dollarWithAmount:5];
+    ARFMoney *dollar2 = [ARFMoney dollarWithAmount:2];
+    
+    ARFMoney *total = [dollar1 plus:dollar2];
+    
+    XCTAssertEqualObjects(total,[ARFMoney dollarWithAmount:7], "5 +2 has to equal 7");
+    
+}
+
 
 
 
