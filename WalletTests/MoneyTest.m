@@ -28,14 +28,6 @@
     [super tearDown];
 }
 
-- (void)testMoneyTimes{
-    
-    ARFMoney * money = [[ARFMoney alloc] initWithAmount:5];
-    
-    
-    XCTAssertThrows([money times:5], "Money times should rise exception");
-}
-
 
 -(void) testHash{
     

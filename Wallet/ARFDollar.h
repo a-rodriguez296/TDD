@@ -14,6 +14,6 @@
 
 
 
--(id) times:(NSUInteger) multiplier;
+
 
 @end

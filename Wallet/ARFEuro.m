@@ -18,10 +18,7 @@
 
 
 
--(id) times:(NSUInteger) multiplier{
-    
-    return [ARFMoney dollarWithAmount:[self.amount integerValue] * multiplier];
-}
+
 
 
 

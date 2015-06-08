@@ -36,7 +36,7 @@
 
 -(id) times:(NSUInteger) multiplier{
     
-    return [self subclassResponsibility:_cmd];
+    return [[ARFMoney alloc] initWithAmount:[self.amount integerValue] * multiplier];
 }
 
 
