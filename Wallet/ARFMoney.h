@@ -10,6 +10,8 @@
 
 @interface ARFMoney : NSObject
 
++(id) euroWithAmount:(NSUInteger) amount;
++(id) dollarWithAmount:(NSUInteger) amount;
 
 - (id)initWithAmount:(NSUInteger) amount;
 -(id) times:(NSUInteger) multiplier;

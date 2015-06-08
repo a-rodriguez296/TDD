@@ -14,6 +14,6 @@
 
 
 
--(ARFEuro *) times:(NSUInteger) multiplier;
+-(id) times:(NSUInteger) multiplier;
 
 @end

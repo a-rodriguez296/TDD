@@ -13,6 +13,18 @@
 
 @implementation ARFMoney
 
++(id) euroWithAmount:(NSUInteger) amount{
+    
+    return [[ARFMoney alloc] initWithAmount:amount];
+}
+
+
++(id) dollarWithAmount:(NSUInteger) amount{
+    
+    return [[ARFMoney alloc] initWithAmount:amount];
+}
+
+
 - (id)initWithAmount:(NSUInteger)amount
 {
     self = [super init];

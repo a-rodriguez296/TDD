@@ -13,9 +13,9 @@
 
 
 
--(ARFDollar *) times:(NSUInteger) multiplier{
+-(id) times:(NSUInteger) multiplier{
     
-    return [[ARFDollar alloc] initWithAmount:([self.amount integerValue]  * multiplier)];
+    return [ARFMoney dollarWithAmount:[self.amount integerValue] * multiplier];
 }
 
 @end
