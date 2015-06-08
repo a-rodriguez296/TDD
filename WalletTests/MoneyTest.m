@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "ARFMoney.h"
-#import "ARFEuro.h"
-#import "ARFDollar.h"
 
 @interface MoneyTest : XCTestCase
 
@@ -31,9 +29,9 @@
 
 -(void) testHash{
     
-    ARFMoney * money1 = [[ARFMoney alloc] initWithAmount:5];
-    ARFMoney *money2 = [[ARFMoney alloc] initWithAmount:5];
-    ARFMoney *money3 = [[ARFMoney alloc] initWithAmount:6];
+    ARFMoney * money1 = [[ARFMoney alloc] initWithAmount:5 currency:@"EUR"];
+    ARFMoney *money2 = [[ARFMoney alloc] initWithAmount:5 currency:@"EUR"];
+    ARFMoney *money3 = [[ARFMoney alloc] initWithAmount:6 currency:@"EUR"];
     
     
     XCTAssertEqual([money1 hash], [money2 hash], "equal objects ough to have equal hash");
@@ -44,21 +42,21 @@
 
 -(void) testEquality{
     
-    ARFEuro *euro = [ARFMoney euroWithAmount:5];
-    ARFEuro *product = [euro times:2];
-    ARFEuro *tenEuro = [[ARFEuro alloc] initWithAmount:10];
+    ARFMoney *euro = [ARFMoney euroWithAmount:5];
+    ARFMoney *product = [euro times:2];
+    ARFMoney *tenEuro = [ARFMoney euroWithAmount:10];
     XCTAssertEqualObjects(tenEuro, product, "10 has to be equal to 5*2");
     
     
     
-    ARFDollar *dollar = [ARFDollar dollarWithAmount:5];
-    ARFDollar *product1 = [dollar times:2];
-    ARFDollar *tenDollar = [[ARFDollar alloc] initWithAmount:10];
+    ARFMoney *dollar = [ARFMoney dollarWithAmount:5];
+    ARFMoney *product1 = [dollar times:2];
+    ARFMoney *tenDollar = [ARFMoney dollarWithAmount:10];
     XCTAssertEqualObjects(tenDollar, product1, "10 has to be equal to 5*2");
-    
-    
-    
-    
+
 }
+
+
+
 
 @end

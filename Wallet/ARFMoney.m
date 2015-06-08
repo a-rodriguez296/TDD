@@ -8,35 +8,42 @@
 
 #import "ARFMoney.h"
 #import "NSObject+GNUStepAddons.h"
-#import "ARFMoney-Private.h"
+
+@interface ARFMoney ()
+
+@property (nonatomic, strong) NSNumber *amount;
+@property (nonatomic, copy) NSString *currency;
+
+@end
 
 
 @implementation ARFMoney
 
 +(id) euroWithAmount:(NSUInteger) amount{
     
-    return [[ARFMoney alloc] initWithAmount:amount];
+    return [[ARFMoney alloc] initWithAmount:amount currency:@"EUR"];
 }
 
 
 +(id) dollarWithAmount:(NSUInteger) amount{
     
-    return [[ARFMoney alloc] initWithAmount:amount];
+    return [[ARFMoney alloc] initWithAmount:amount currency:@"USD"];
 }
 
 
-- (id)initWithAmount:(NSUInteger)amount
+- (id)initWithAmount:(NSUInteger)amount currency:(NSString *) currency
 {
     self = [super init];
     if (self) {
         _amount = @(amount);
+        _currency = currency;
     }
     return self;
 }
 
 -(id) times:(NSUInteger) multiplier{
     
-    return [[ARFMoney alloc] initWithAmount:[self.amount integerValue] * multiplier];
+    return [[ARFMoney alloc] initWithAmount:([self.amount integerValue] * multiplier) currency:self.currency];
 }
 
 

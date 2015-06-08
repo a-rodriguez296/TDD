@@ -13,7 +13,7 @@
 +(id) euroWithAmount:(NSUInteger) amount;
 +(id) dollarWithAmount:(NSUInteger) amount;
 
-- (id)initWithAmount:(NSUInteger) amount;
+- (id)initWithAmount:(NSUInteger)amount currency:(NSString *) currency;
 -(id) times:(NSUInteger) multiplier;
 
 @end

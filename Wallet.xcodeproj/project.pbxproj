@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C0A693D1B22546C00A4342B /* DollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A693C1B22546C00A4342B /* DollarTest.m */; };
-		9C0A69401B2254C300A4342B /* ARFDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A693F1B2254C300A4342B /* ARFDollar.m */; };
-		9C0A69411B2254C300A4342B /* ARFDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A693F1B2254C300A4342B /* ARFDollar.m */; };
-		9CD4A7E21B24AD5D0043DE7E /* ARFEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7E11B24AD5D0043DE7E /* ARFEuro.m */; };
-		9CD4A7E51B24AD7E0043DE7E /* EuroTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7E41B24AD7E0043DE7E /* EuroTest.m */; };
 		9CD4A7E91B24B20C0043DE7E /* MoneyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7E81B24B20C0043DE7E /* MoneyTest.m */; };
 		9CD4A7EC1B24B2A60043DE7E /* ARFMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */; };
 		9CD4A7ED1B24B2A60043DE7E /* ARFMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */; };
@@ -36,12 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C0A693C1B22546C00A4342B /* DollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarTest.m; sourceTree = "<group>"; };
-		9C0A693E1B2254C300A4342B /* ARFDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFDollar.h; sourceTree = "<group>"; };
-		9C0A693F1B2254C300A4342B /* ARFDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFDollar.m; sourceTree = "<group>"; };
-		9CD4A7E01B24AD5D0043DE7E /* ARFEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFEuro.h; sourceTree = "<group>"; };
-		9CD4A7E11B24AD5D0043DE7E /* ARFEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFEuro.m; sourceTree = "<group>"; };
-		9CD4A7E41B24AD7E0043DE7E /* EuroTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EuroTest.m; sourceTree = "<group>"; };
 		9CD4A7E81B24B20C0043DE7E /* MoneyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTest.m; sourceTree = "<group>"; };
 		9CD4A7EA1B24B2A60043DE7E /* ARFMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFMoney.h; sourceTree = "<group>"; };
 		9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFMoney.m; sourceTree = "<group>"; };
@@ -83,10 +72,6 @@
 		9CD4A7E31B24AD690043DE7E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9CD4A7E01B24AD5D0043DE7E /* ARFEuro.h */,
-				9CD4A7E11B24AD5D0043DE7E /* ARFEuro.m */,
-				9C0A693E1B2254C300A4342B /* ARFDollar.h */,
-				9C0A693F1B2254C300A4342B /* ARFDollar.m */,
 				9CD4A7EA1B24B2A60043DE7E /* ARFMoney.h */,
 				9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */,
 				9CD4A7F31B24BAEF0043DE7E /* ARFMoney-Private.h */,
@@ -151,8 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				9CD4A7E81B24B20C0043DE7E /* MoneyTest.m */,
-				9CD4A7E41B24AD7E0043DE7E /* EuroTest.m */,
-				9C0A693C1B22546C00A4342B /* DollarTest.m */,
 				ED49C82C1B1CF38E00D683CE /* Supporting Files */,
 			);
 			path = WalletTests;
@@ -267,12 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED49C81B1B1CF38E00D683CE /* ViewController.m in Sources */,
-				9C0A69401B2254C300A4342B /* ARFDollar.m in Sources */,
 				9CD4A7F01B24B3350043DE7E /* NSObject+GNUStepAddons.m in Sources */,
 				ED49C8181B1CF38E00D683CE /* AppDelegate.m in Sources */,
 				ED49C8151B1CF38E00D683CE /* main.m in Sources */,
 				9CD4A7EC1B24B2A60043DE7E /* ARFMoney.m in Sources */,
-				9CD4A7E21B24AD5D0043DE7E /* ARFEuro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,12 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0A693D1B22546C00A4342B /* DollarTest.m in Sources */,
 				9CD4A7ED1B24B2A60043DE7E /* ARFMoney.m in Sources */,
-				9C0A69411B2254C300A4342B /* ARFDollar.m in Sources */,
 				9CD4A7F11B24B3350043DE7E /* NSObject+GNUStepAddons.m in Sources */,
 				9CD4A7E91B24B20C0043DE7E /* MoneyTest.m in Sources */,
-				9CD4A7E51B24AD7E0043DE7E /* EuroTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
