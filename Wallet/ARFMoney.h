@@ -10,6 +10,9 @@
 
 @interface ARFMoney : NSObject
 
+@property (nonatomic, copy) NSString *currency;
+@property (nonatomic, strong) NSNumber *amount;
+
 +(id) euroWithAmount:(NSUInteger) amount;
 +(id) dollarWithAmount:(NSUInteger) amount;
 

@@ -11,8 +11,8 @@
 
 @interface ARFMoney ()
 
-@property (nonatomic, strong) NSNumber *amount;
-@property (nonatomic, copy) NSString *currency;
+
+
 
 @end
 

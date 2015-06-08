@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "ARFMoney.h"
+#import "ARFBroker.h"
 
 @interface MoneyTest : XCTestCase
+
+
+@property (nonatomic, strong) ARFMoney *dollar1;
+@property (nonatomic, strong) ARFMoney *dollar2;
+@property (nonatomic, strong) ARFMoney *euro5;
+@property (nonatomic, strong) ARFBroker * broker;
 
 @end
 
@@ -18,12 +25,22 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+
+    
+    self.dollar1 = [ARFMoney dollarWithAmount:5];
+    self.dollar2 = [ARFMoney dollarWithAmount:2];
+    self.euro5 = [ARFMoney euroWithAmount:5];
+    self.broker = [ARFBroker new];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+
     [super tearDown];
+    
+    _dollar1 = nil;
+    _dollar2 = nil;
+    _euro5 = nil;
+    _broker = nil;
 }
 
 
@@ -57,17 +74,32 @@
 }
 
 -(void)testPlus{
-
-    ARFMoney *dollar1 = [ARFMoney dollarWithAmount:5];
-    ARFMoney *dollar2 = [ARFMoney dollarWithAmount:2];
     
-    ARFMoney *total = [dollar1 plus:dollar2];
+    ARFMoney *total = [self.dollar1 plus:self.dollar2];
     
     XCTAssertEqualObjects(total,[ARFMoney dollarWithAmount:7], "5 +2 has to equal 7");
     
 }
 
+-(void) testSimpleAdditionWithReduction{
+    
+    ARFMoney *sum = [self.dollar1 plus:self.dollar2];
+    
+    ARFMoney *reduced = [self.broker reduce:sum toCurrency:@"USD"];
+    
+    XCTAssertEqualObjects(sum, reduced, "Converting to the same currency has to be equal to the sum");
+    
+}
 
 
+-(void) testConversion{
+    
+    [self.broker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    
+    ARFMoney *converted = [self.broker reduce:self.euro5 toCurrency:@"USD"];
+    
+    XCTAssertEqualObjects(converted, [ARFMoney dollarWithAmount:10], "5 Euros are equal to 10 dollars with 2/1 as conversion rate");
+    
+}
 
 @end
