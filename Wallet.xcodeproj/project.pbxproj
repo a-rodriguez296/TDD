@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9C8403731B26444C007DD280 /* ARFBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8403721B26444C007DD280 /* ARFBroker.m */; };
 		9C8403741B26444C007DD280 /* ARFBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8403721B26444C007DD280 /* ARFBroker.m */; };
+		9C8403761B267054007DD280 /* ARFWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8403751B267054007DD280 /* ARFWalletTests.m */; };
+		9C8403791B2677E3007DD280 /* ARFWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8403781B2677E3007DD280 /* ARFWallet.m */; };
+		9C84037A1B2677E3007DD280 /* ARFWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8403781B2677E3007DD280 /* ARFWallet.m */; };
 		9CD4A7E91B24B20C0043DE7E /* MoneyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7E81B24B20C0043DE7E /* MoneyTest.m */; };
 		9CD4A7EC1B24B2A60043DE7E /* ARFMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */; };
 		9CD4A7ED1B24B2A60043DE7E /* ARFMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		9C8403711B26444C007DD280 /* ARFBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFBroker.h; sourceTree = "<group>"; };
 		9C8403721B26444C007DD280 /* ARFBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFBroker.m; sourceTree = "<group>"; };
+		9C8403751B267054007DD280 /* ARFWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFWalletTests.m; sourceTree = "<group>"; };
+		9C8403771B2677E3007DD280 /* ARFWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFWallet.h; sourceTree = "<group>"; };
+		9C8403781B2677E3007DD280 /* ARFWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFWallet.m; sourceTree = "<group>"; };
 		9CD4A7E81B24B20C0043DE7E /* MoneyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTest.m; sourceTree = "<group>"; };
 		9CD4A7EA1B24B2A60043DE7E /* ARFMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFMoney.h; sourceTree = "<group>"; };
 		9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFMoney.m; sourceTree = "<group>"; };
@@ -79,6 +85,8 @@
 				9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */,
 				9C8403711B26444C007DD280 /* ARFBroker.h */,
 				9C8403721B26444C007DD280 /* ARFBroker.m */,
+				9C8403771B2677E3007DD280 /* ARFWallet.h */,
+				9C8403781B2677E3007DD280 /* ARFWallet.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 		ED49C82B1B1CF38E00D683CE /* WalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				9C8403751B267054007DD280 /* ARFWalletTests.m */,
 				9CD4A7E81B24B20C0043DE7E /* MoneyTest.m */,
 				ED49C82C1B1CF38E00D683CE /* Supporting Files */,
 			);
@@ -256,6 +265,7 @@
 				9C8403731B26444C007DD280 /* ARFBroker.m in Sources */,
 				ED49C81B1B1CF38E00D683CE /* ViewController.m in Sources */,
 				9CD4A7F01B24B3350043DE7E /* NSObject+GNUStepAddons.m in Sources */,
+				9C8403791B2677E3007DD280 /* ARFWallet.m in Sources */,
 				ED49C8181B1CF38E00D683CE /* AppDelegate.m in Sources */,
 				ED49C8151B1CF38E00D683CE /* main.m in Sources */,
 				9CD4A7EC1B24B2A60043DE7E /* ARFMoney.m in Sources */,
@@ -266,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C84037A1B2677E3007DD280 /* ARFWallet.m in Sources */,
+				9C8403761B267054007DD280 /* ARFWalletTests.m in Sources */,
 				9C8403741B26444C007DD280 /* ARFBroker.m in Sources */,
 				9CD4A7ED1B24B2A60043DE7E /* ARFMoney.m in Sources */,
 				9CD4A7F11B24B3350043DE7E /* NSObject+GNUStepAddons.m in Sources */,

@@ -26,28 +26,27 @@
     return self;
 }
 
--(ARFMoney *) reduce:(ARFMoney *) sum toCurrency:(NSString *) currency{
+-(id<ARFMoney>) reduce:(ARFMoney *) sum toCurrency:(NSString *) currency{
     
     ARFMoney *result;
     
+    
+    NSString *conversionKey = [self keyFromCurrency:sum.currency toCurrency:currency];
+    double rate = [[self.rateDictionary objectForKey:conversionKey] doubleValue];
+    
+    
+    
     if ([sum.currency isEqualToString:currency]) {
-       result = sum;
+        result = sum;
+    }
+    else if (rate == 0){
+        [NSException raise:@"NilConversionException" format:@"No conversion rate from %@ to %@", sum.currency, currency];
     }
     else{
-        //Construir la llave
-        NSString *key = [NSString stringWithFormat:@"%@-%@", currency, sum.currency];
         
-        //Obtener la conversion
-        NSNumber *convertionRate = [self.rateDictionary objectForKey:key];
+        NSUInteger amount = rate * [sum.amount integerValue];
+        result = [[ARFMoney alloc] initWithAmount:amount currency:currency];
         
-        if (convertionRate == nil) {
-            [NSException raise:@"NilConversionException" format:@"No conversion rate from %@ to %@", sum.currency, currency];
-        }
-        else{
-            
-            NSUInteger amount = [convertionRate unsignedIntegerValue] * [[sum amount] unsignedIntegerValue];
-            result = [[ARFMoney alloc] initWithAmount:amount currency:currency];
-        }
     }
     return result;
 }
@@ -61,4 +60,11 @@
     
 }
 
+
+
+-(NSString *) keyFromCurrency:(NSString *) fromCurrency toCurrency:(NSString *) toCurrency{
+    
+    NSString *key = [NSString stringWithFormat:@"%@-%@", toCurrency, fromCurrency];
+    return key;
+}
 @end

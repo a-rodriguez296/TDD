@@ -7,17 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
+@class ARFMoney;
 
-@interface ARFMoney : NSObject
+@protocol ARFMoney <NSObject>
+
+- (id)initWithAmount:(NSUInteger)amount currency:(NSString *) currency;
+
+-(id<ARFMoney>) times:(NSUInteger) multiplier;
+-(id<ARFMoney>) plus:(ARFMoney *) other;
+
+@end
+
+
+@interface ARFMoney : NSObject<ARFMoney>
 
 @property (nonatomic, copy) NSString *currency;
-@property (nonatomic, strong) NSNumber *amount;
+@property (nonatomic, strong, readonly) NSNumber *amount;
 
 +(id) euroWithAmount:(NSUInteger) amount;
 +(id) dollarWithAmount:(NSUInteger) amount;
 
-- (id)initWithAmount:(NSUInteger)amount currency:(NSString *) currency;
--(id) times:(NSUInteger) multiplier;
--(ARFMoney *) plus:(ARFMoney *) other;
+
+
 
 @end

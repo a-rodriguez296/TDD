@@ -41,12 +41,12 @@
     return self;
 }
 
--(id) times:(NSUInteger) multiplier{
+-(id<ARFMoney>) times:(NSUInteger) multiplier{
     
     return [[ARFMoney alloc] initWithAmount:([self.amount integerValue] * multiplier) currency:self.currency];
 }
 
--(ARFMoney *) plus:(ARFMoney *) other{
+-(id<ARFMoney>) plus:(ARFMoney *) other{
     
     return [[ARFMoney alloc] initWithAmount:[self.amount integerValue] + [other.amount integerValue] currency:self.currency];
     

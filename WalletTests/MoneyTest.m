@@ -102,4 +102,13 @@
     
 }
 
+-(void) testHashStorage{
+    
+    NSInteger amount = 4;
+    ARFMoney *money = [ARFMoney euroWithAmount:amount];
+    
+    XCTAssertEqual([[money amount] integerValue], 4, @"Hash shold be the same amount");
+    
+}
+
 @end

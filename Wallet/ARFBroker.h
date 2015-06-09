@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-@class ARFMoney;
+#import "ARFMoney.h"
 
 @interface ARFBroker : NSObject
 
--(ARFMoney *) reduce:(ARFMoney *) sum toCurrency:(NSString *) currency;
+-(ARFMoney *) reduce:(id<ARFMoney>) sum toCurrency:(NSString *) currency;
 
 -(void) addRate:(NSInteger) rate fromCurrency:(NSString *) currency toCurrency:(NSString *) currency;
 
