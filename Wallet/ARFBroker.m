@@ -11,7 +11,7 @@
 
 @interface ARFBroker ()
 
-@property (nonatomic, strong) NSMutableDictionary *rateDictionary;
+
 
 @end
 
@@ -28,27 +28,7 @@
 
 -(id<ARFMoney>) reduce:(ARFMoney *) sum toCurrency:(NSString *) currency{
     
-    ARFMoney *result;
-    
-    
-    NSString *conversionKey = [self keyFromCurrency:sum.currency toCurrency:currency];
-    double rate = [[self.rateDictionary objectForKey:conversionKey] doubleValue];
-    
-    
-    
-    if ([sum.currency isEqualToString:currency]) {
-        result = sum;
-    }
-    else if (rate == 0){
-        [NSException raise:@"NilConversionException" format:@"No conversion rate from %@ to %@", sum.currency, currency];
-    }
-    else{
-        
-        NSUInteger amount = rate * [sum.amount integerValue];
-        result = [[ARFMoney alloc] initWithAmount:amount currency:currency];
-        
-    }
-    return result;
+    return [sum reduceToCurrency:currency withBroker:self];
 }
 
 -(void) addRate:(NSInteger) rate fromCurrency:(NSString *) fromCurrency toCurrency:(NSString *) toCurrency{

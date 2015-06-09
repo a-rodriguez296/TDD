@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class ARFMoney;
+@class ARFBroker;
 
 @protocol ARFMoney <NSObject>
 
@@ -15,6 +16,8 @@
 
 -(id<ARFMoney>) times:(NSUInteger) multiplier;
 -(id<ARFMoney>) plus:(ARFMoney *) other;
+
+-(id<ARFMoney>) reduceToCurrency:(NSString *) currency withBroker:(ARFBroker *) broker;
 
 @end
 

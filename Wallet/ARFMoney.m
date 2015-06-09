@@ -8,13 +8,7 @@
 
 #import "ARFMoney.h"
 #import "NSObject+GNUStepAddons.h"
-
-@interface ARFMoney ()
-
-
-
-
-@end
+#import "ARFBroker.h"
 
 
 @implementation ARFMoney
@@ -49,6 +43,26 @@
 -(id<ARFMoney>) plus:(ARFMoney *) other{
     
     return [[ARFMoney alloc] initWithAmount:[self.amount integerValue] + [other.amount integerValue] currency:self.currency];
+    
+}
+
+-(id<ARFMoney>) reduceToCurrency:(NSString *) currency withBroker:(ARFBroker *) broker{
+    
+    ARFMoney *result;
+    NSString *rateKey = [broker keyFromCurrency:self.currency toCurrency:currency];
+    double rate = [[broker.rateDictionary objectForKey:rateKey] doubleValue];
+    
+    if ([self.currency isEqualToString:currency]) {
+        result = self;
+    }
+    else if (rate == 0){
+        [NSException raise:@"NilConversionException" format:@"No conversion rate from %@ to %@", self.currency, currency];
+    }
+    else{
+        NSInteger newAmount = [self.amount integerValue] * rate;
+        result= [[ARFMoney alloc] initWithAmount:newAmount currency:self.currency];
+    }
+    return result;
     
 }
 

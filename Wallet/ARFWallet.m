@@ -45,6 +45,15 @@
     return self;
     
 }
-
+-(id<ARFMoney>) reduceToCurrency:(NSString *) currency withBroker:(ARFBroker *) broker{
+    
+    ARFMoney *result = [[ARFMoney alloc] initWithAmount:0 currency:currency];
+    
+    for (ARFMoney *money in self.moneys) {
+        
+        [result plus:[money reduceToCurrency:currency withBroker:broker]];
+    }
+    return result;
+}
 
 @end

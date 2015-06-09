@@ -53,15 +53,15 @@
 }
 
 
-//-(void) testAdditionWithReduction{
-//    
-//    
-//    [self.emptyBroker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
-//    
-//    
-//    ARFWallet *wallet = [[[ARFWallet alloc] initWithAmount:40 currency:@"EUR"] plus:[ARFMoney dollarWithAmount:20]];
-//    
-//    XCTAssertEqualObjects([self.emptyBroker reduce:wallet toCurrency:@"USD"], [ARFMoney dollarWithAmount:100], @"Reduced value should be equal to total");
-//}
+-(void) testAdditionWithReduction{
+    
+    
+    [self.emptyBroker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    
+    
+    ARFWallet *wallet = [[[ARFWallet alloc] initWithAmount:40 currency:@"EUR"] plus:[ARFMoney dollarWithAmount:20]];
+    
+    XCTAssertEqualObjects([self.emptyBroker reduce:wallet toCurrency:@"USD"], [ARFMoney dollarWithAmount:100], @"Reduced value should be equal to total");
+}
 
 @end
