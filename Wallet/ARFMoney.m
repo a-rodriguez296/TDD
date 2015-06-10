@@ -42,14 +42,18 @@
 
 -(id<ARFMoney>) plus:(ARFMoney *) other{
     
-    return [[ARFMoney alloc] initWithAmount:[self.amount integerValue] + [other.amount integerValue] currency:self.currency];
+    
+    NSUInteger newAmount = [self.amount integerValue] + [other.amount integerValue];
+    ARFMoney *newMoney = [[ARFMoney alloc] initWithAmount:newAmount currency:self.currency];
+    NSLog(@"%@", newMoney);
+    return newMoney;
     
 }
 
 -(id<ARFMoney>) reduceToCurrency:(NSString *) currency withBroker:(ARFBroker *) broker{
     
     ARFMoney *result;
-    NSString *rateKey = [broker keyFromCurrency:self.currency toCurrency:currency];
+    NSString *rateKey = [broker keyFromCurrency:currency toCurrency:self.currency];
     double rate = [[broker.rateDictionary objectForKey:rateKey] doubleValue];
     
     if ([self.currency isEqualToString:currency]) {

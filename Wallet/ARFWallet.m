@@ -51,9 +51,16 @@
     
     for (ARFMoney *money in self.moneys) {
         
-        [result plus:[money reduceToCurrency:currency withBroker:broker]];
+        ARFMoney *plusOperand = [money reduceToCurrency:currency withBroker:broker];
+        NSLog(@"%@", plusOperand);
+        result =  [result plus:plusOperand];
     }
     return result;
+}
+
+
+-(NSString *)description{
+    return [self.moneys componentsJoinedByString:@","];
 }
 
 @end

@@ -26,7 +26,7 @@
     return self;
 }
 
--(id<ARFMoney>) reduce:(ARFMoney *) sum toCurrency:(NSString *) currency{
+-(id<ARFMoney>) reduce:(id<ARFMoney>) sum toCurrency:(NSString *) currency{
     
     return [sum reduceToCurrency:currency withBroker:self];
 }
@@ -44,7 +44,7 @@
 
 -(NSString *) keyFromCurrency:(NSString *) fromCurrency toCurrency:(NSString *) toCurrency{
     
-    NSString *key = [NSString stringWithFormat:@"%@-%@", toCurrency, fromCurrency];
+    NSString *key = [NSString stringWithFormat:@"%@-%@", fromCurrency, toCurrency];
     return key;
 }
 @end
