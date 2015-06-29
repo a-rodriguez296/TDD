@@ -92,15 +92,7 @@
 }
 
 
--(void) testConversion{
-    
-    [self.broker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
-    
-    ARFMoney *converted = [self.broker reduce:self.euro5 toCurrency:@"USD"];
-    
-    XCTAssertEqualObjects(converted, [ARFMoney dollarWithAmount:10], "5 Euros are equal to 10 dollars with 2/1 as conversion rate");
-    
-}
+
 
 -(void) testHashStorage{
     

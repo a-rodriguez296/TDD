@@ -38,6 +38,12 @@
     
     [self.rateDictionary setObject:value forKey:key];
     
+    
+    NSNumber *invRate =@(1.0/rate);
+    [self.rateDictionary setObject:invRate
+                   forKey:[self keyFromCurrency:toCurrency
+                                     toCurrency:fromCurrency]];
+    
 }
 
 
