@@ -56,7 +56,7 @@
 -(void) testAdditionWithReduction{
     
     
-    [self.emptyBroker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    [self.emptyBroker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
     
     
     ARFWallet *wallet = [[[ARFWallet alloc] initWithAmount:40 currency:@"EUR"] plus:[ARFMoney dollarWithAmount:20]];

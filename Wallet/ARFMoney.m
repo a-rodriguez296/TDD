@@ -73,7 +73,7 @@
 #pragma mark Overwritten
 -(NSString *)description{
     
-    return [NSString stringWithFormat:@"<%@ $: %@>", [self class], self.amount];
+    return [NSString stringWithFormat:@"<%@ $: %@ %@>", [self class], self.amount, self.currency];
     
 }
 
