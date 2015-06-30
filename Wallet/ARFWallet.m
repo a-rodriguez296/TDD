@@ -63,4 +63,8 @@
     return [self.moneys componentsJoinedByString:@","];
 }
 
+-(NSUInteger) count{
+    return self.moneys.count;
+}
+
 @end

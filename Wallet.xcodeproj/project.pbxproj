@@ -18,6 +18,9 @@
 		9CD4A7ED1B24B2A60043DE7E /* ARFMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */; };
 		9CD4A7F01B24B3350043DE7E /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7EF1B24B3350043DE7E /* NSObject+GNUStepAddons.m */; };
 		9CD4A7F11B24B3350043DE7E /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A7EF1B24B3350043DE7E /* NSObject+GNUStepAddons.m */; };
+		9CEE4D751B41B08100EE3923 /* ARFWalletVCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE4D741B41B08100EE3923 /* ARFWalletVCTest.m */; };
+		9CEE4D781B41B10400EE3923 /* ARFWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE4D771B41B10400EE3923 /* ARFWalletViewController.m */; };
+		9CEE4D791B41B10400EE3923 /* ARFWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE4D771B41B10400EE3923 /* ARFWalletViewController.m */; };
 		ED49C8151B1CF38E00D683CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C8141B1CF38E00D683CE /* main.m */; };
 		ED49C8181B1CF38E00D683CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C8171B1CF38E00D683CE /* AppDelegate.m */; };
 		ED49C81B1B1CF38E00D683CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED49C81A1B1CF38E00D683CE /* ViewController.m */; };
@@ -48,6 +51,9 @@
 		9CD4A7EB1B24B2A60043DE7E /* ARFMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFMoney.m; sourceTree = "<group>"; };
 		9CD4A7EE1B24B3350043DE7E /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		9CD4A7EF1B24B3350043DE7E /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
+		9CEE4D741B41B08100EE3923 /* ARFWalletVCTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFWalletVCTest.m; sourceTree = "<group>"; };
+		9CEE4D761B41B10400EE3923 /* ARFWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFWalletViewController.h; sourceTree = "<group>"; };
+		9CEE4D771B41B10400EE3923 /* ARFWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFWalletViewController.m; sourceTree = "<group>"; };
 		ED49C80F1B1CF38E00D683CE /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED49C8131B1CF38E00D683CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED49C8141B1CF38E00D683CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +108,23 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		9CEE4D7A1B41B10C00EE3923 /* WalletVC */ = {
+			isa = PBXGroup;
+			children = (
+				9CEE4D761B41B10400EE3923 /* ARFWalletViewController.h */,
+				9CEE4D771B41B10400EE3923 /* ARFWalletViewController.m */,
+			);
+			name = WalletVC;
+			sourceTree = "<group>";
+		};
+		9CEE4D7B1B41B11300EE3923 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CEE4D7A1B41B10C00EE3923 /* WalletVC */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		ED49C8061B1CF38E00D683CE = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +148,7 @@
 			children = (
 				9CD4A7F21B24B34A0043DE7E /* Categories */,
 				9CD4A7E31B24AD690043DE7E /* Model */,
+				9CEE4D7B1B41B11300EE3923 /* Controllers */,
 				ED49C8161B1CF38E00D683CE /* AppDelegate.h */,
 				ED49C8171B1CF38E00D683CE /* AppDelegate.m */,
 				ED49C8191B1CF38E00D683CE /* ViewController.h */,
@@ -153,6 +177,7 @@
 				9C8403751B267054007DD280 /* ARFWalletTests.m */,
 				9CD4A7E81B24B20C0043DE7E /* MoneyTest.m */,
 				ED49C82C1B1CF38E00D683CE /* Supporting Files */,
+				9CEE4D741B41B08100EE3923 /* ARFWalletVCTest.m */,
 			);
 			path = WalletTests;
 			sourceTree = "<group>";
@@ -270,6 +295,7 @@
 				9CD4A7F01B24B3350043DE7E /* NSObject+GNUStepAddons.m in Sources */,
 				9C8403791B2677E3007DD280 /* ARFWallet.m in Sources */,
 				ED49C8181B1CF38E00D683CE /* AppDelegate.m in Sources */,
+				9CEE4D781B41B10400EE3923 /* ARFWalletViewController.m in Sources */,
 				ED49C8151B1CF38E00D683CE /* main.m in Sources */,
 				9CD4A7EC1B24B2A60043DE7E /* ARFMoney.m in Sources */,
 			);
@@ -282,10 +308,12 @@
 				9C84037A1B2677E3007DD280 /* ARFWallet.m in Sources */,
 				9C8403761B267054007DD280 /* ARFWalletTests.m in Sources */,
 				9C48182F1B3DABCC007C93E8 /* ARFBrokerTests.m in Sources */,
+				9CEE4D791B41B10400EE3923 /* ARFWalletViewController.m in Sources */,
 				9C8403741B26444C007DD280 /* ARFBroker.m in Sources */,
 				9CD4A7ED1B24B2A60043DE7E /* ARFMoney.m in Sources */,
 				9CD4A7F11B24B3350043DE7E /* NSObject+GNUStepAddons.m in Sources */,
 				9CD4A7E91B24B20C0043DE7E /* MoneyTest.m in Sources */,
+				9CEE4D751B41B08100EE3923 /* ARFWalletVCTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

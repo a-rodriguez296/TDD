@@ -11,4 +11,7 @@
 
 @interface ARFWallet : NSObject <ARFMoney>
 
+-(NSUInteger) count;
+
+
 @end
