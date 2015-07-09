@@ -73,6 +73,11 @@
 
 }
 
+-(void) testDifferentCurrencies{
+
+    XCTAssertNotEqualObjects(self.dollar1, self.euro5, "Different currencies should not be equal");
+}
+
 -(void)testPlus{
     
     ARFMoney *total = [self.dollar1 plus:self.dollar2];

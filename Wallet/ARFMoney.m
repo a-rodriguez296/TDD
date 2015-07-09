@@ -83,8 +83,12 @@
     
 }
 
--(BOOL)isEqual:(id)object{
-    return (self.amount == [object amount]);
+-(BOOL)isEqual:(ARFMoney *)object{
+    if ([self.currency isEqualToString:object.currency]) {
+        return (self.amount == [object amount]);
+    }
+    else
+        return NO;
 }
 
 @end
